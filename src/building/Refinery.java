@@ -1,3 +1,13 @@
+package building;
+
+public class Refinery extends Building {
+
+    public Refinery() {
+        super("Raffinerie", TypeBuilding.Refinery);
+    }
+
+}
+
 //public class Refinery {
 //    private int capaciteTraitement;
 //    private RawMaterial stockBrut;

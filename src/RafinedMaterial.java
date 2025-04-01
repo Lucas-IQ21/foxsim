@@ -1,21 +1,21 @@
 public class RafinedMaterial {
     private String type;
-    private int quantite;
+    private int quantity;
 
-    public RafinedMaterial(String type, int quantite) {
+    public RafinedMaterial(String type, int quantity) {
         this.type = type;
-        this.quantite = quantite;
+        this.quantity = quantity;
     }
 
     public String getType() {
         return type;
     }
 
-    public int getQuantite() {
-        return quantite;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void ajouterQuantite(int quantite) {
-        this.quantite += quantite;
+    public void addQuantity(int quantity) {
+        this.quantity += quantity;
     }
 }

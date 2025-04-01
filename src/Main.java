@@ -1,14 +1,15 @@
+import building.Refinery;
 import rawMaterials.Salvage;
 
 public class Main {
     public static void main(String[] args) {
 
 
-        Salvage s = new Salvage(1500);
-        System.out.println("Le type : " + s.getType());
-        System.out.println("La quantité : " + s.getQuantity());
+        Salvage salvage = new Salvage(1500);
+        System.out.println("Le type : " + salvage.getType());
+        System.out.println("La quantité : " + salvage.getQuantity());
 
-//        Refinery refinery = new Refinery(10, "Acier");
+        Refinery refinery = new Refinery();
 //
 //        refinery.submitRawMatrials(500);
 //
