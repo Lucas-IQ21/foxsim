@@ -8,5 +8,4 @@ public enum TypeRawMaterial {
     Aluminium,
     Copper,
     Iron,
-    
 }

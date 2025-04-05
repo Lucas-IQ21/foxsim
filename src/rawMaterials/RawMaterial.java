@@ -2,7 +2,7 @@ package rawMaterials;
 
 abstract class RawMaterial {
     private String type;
-    private int quantity;
+    private int quantity = 0;
     private int timeToRefine;
     private TypeRawMaterial typeRawMaterial;
 
@@ -12,6 +12,7 @@ abstract class RawMaterial {
         this.timeToRefine = timeToRefine;
         this.typeRawMaterial = typeRawMaterial;
     }
+
 
     public String getType() {
         return type;

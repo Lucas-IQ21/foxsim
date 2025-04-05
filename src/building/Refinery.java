@@ -1,16 +1,19 @@
 package building;
 
+import rawMaterials.Salvage;
 import rawMaterials.TypeRawMaterial;
 
 public class Refinery extends Building {
     int rawQuantitySalvage;
 
+
     public Refinery() {
         super("Raffinerie", TypeBuilding.Refinery);
     }
 
-    public void submitRawMatrials(int quantity, TypeRawMaterial material) {
-        .setQuantite(stockBrut.getQuantite() + quantity);
+    public void submitRawMatrials(Salvage salvage,int quantity) {
+        salvage.setQuantity(salvage.getQuantity() + quantity);
+        setRawQuantitySalvage(quantity);
     }
 
     // Get & Set
