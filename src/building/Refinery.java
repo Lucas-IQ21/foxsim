@@ -4,7 +4,8 @@ import rawMaterials.Salvage;
 import rawMaterials.TypeRawMaterial;
 
 public class Refinery extends Building {
-    int rawQuantitySalvage;
+    private int rawQuantitySalvage;
+    private int basicMaterialQuantity;
 
 
     public Refinery() {
@@ -16,13 +17,42 @@ public class Refinery extends Building {
         setRawQuantitySalvage(quantity);
     }
 
+    public void refinement(){
+        int quantityToRefine = getRawQuantitySalvage();
+        
+        while (quantityToRefine > 0) {
+            System.out.println("Traitement en cours... ("+ quantityToRefine + " unités)");
+            try {
+                Thread.sleep(480);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            quantityToRefine -= 2;
+            System.out.println("Salvage restant :  " + getRawQuantitySalvage());
+            
+            setBasicMaterialQuantity(+1);
+            System.out.println("Bmat créés :  " + getBasicMaterialQuantity());
+        }
+
+            System.out.println("Aucune matière a raffiner.");
+
+
+        
+    }
+
     // Get & Set
     public int getRawQuantitySalvage() {
         return rawQuantitySalvage;
     }
+    public int getBasicMaterialQuantity() {
+        return basicMaterialQuantity;
+    }
 
     public void setRawQuantitySalvage(int rawQuantitySalvage) {
         this.rawQuantitySalvage += rawQuantitySalvage;
+    }
+    public void setBasicMaterialQuantity(int basicMaterialQuantity) {
+        this.basicMaterialQuantity += basicMaterialQuantity;
     }
 
 
