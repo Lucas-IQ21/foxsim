@@ -9,5 +9,12 @@ public enum TypeRefinedMaterial {
     BasicMaterials,
     ExplosivePowder,
     Diesel,
-    HeavyExplosivePowder
+    HeavyExplosivePowder(10, "toto");
+    private final int taux;
+    private final String libelle;
+
+    private TypeRefinedMaterial(int taux, String libelle) {
+        this.taux = taux;
+        this.libelle = libelle;
+    }
 }

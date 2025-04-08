@@ -20,7 +20,7 @@ public class Refinery extends Building {
     public int refinement(RawMaterial material, TypeRefinedMaterial typeRefinedMaterial) {
         int quantityToRefine = getRawQuantitySalvage();
 
-        while (quantityToRefine > 0) {
+        while (quantityToRefine >= 2) {
             System.out.println("Traitement en cours... ("+ quantityToRefine + " unités)");
             try {
                 Thread.sleep(material.getTimeToRefine());
