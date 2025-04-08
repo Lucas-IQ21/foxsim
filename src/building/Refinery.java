@@ -27,13 +27,14 @@ public class Refinery extends Building {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            quantityToRefine -= 2;
+            quantityToRefine -= typeRefinedMaterial.getRatio();
             System.out.println("Quantités bruts restant :  " + getRawQuantitySalvage());
 
             setBasicMaterialQuantity(+1);
-            System.out.println("Bmats créés :  " + getBasicMaterialQuantity());
+            System.out.println(typeRefinedMaterial.getLabel()+" créés " + getBasicMaterialQuantity());
         }
             System.out.println("Aucune matière a raffiner.");
+        return quantityToRefine;
     }
 
     // Get & Set
