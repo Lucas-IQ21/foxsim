@@ -1,6 +1,7 @@
 package building;
 
 import rawMaterials.RawMaterial;
+import refinedMaterials.TypeRefinedMaterial;
 
 public class Refinery extends Building {
     private int rawQuantitySalvage;
@@ -16,7 +17,7 @@ public class Refinery extends Building {
         setRawQuantitySalvage(quantity);
     }
 
-    public void refinement(RawMaterial material) {
+    public int refinement(RawMaterial material, TypeRefinedMaterial typeRefinedMaterial) {
         int quantityToRefine = getRawQuantitySalvage();
 
         while (quantityToRefine > 0) {
