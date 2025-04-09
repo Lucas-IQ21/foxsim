@@ -1,11 +1,11 @@
 package refinedMaterials;
 
-public class refinedMaterial {
+public class RefinedMaterial {
     private int quantity;
     private TypeRefinedMaterial typeMaterial;
 
 
-    public refinedMaterial(int quantity, TypeRefinedMaterial typeMaterial) {
+    public RefinedMaterial(int quantity, TypeRefinedMaterial typeMaterial) {
         this.quantity = quantity;
         this.typeMaterial = typeMaterial;
     }

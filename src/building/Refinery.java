@@ -6,6 +6,10 @@ import refinedMaterials.TypeRefinedMaterial;
 public class Refinery extends Building {
     private int rawQuantitySalvage;
     private int basicMaterialQuantity;
+    // TODO : Ajouter les getter et setter
+    private int refinedMaterialQuantity;
+    private int gravelQuantity;
+    private int diselQuantity;
 
 
     public Refinery() {
@@ -30,7 +34,7 @@ public class Refinery extends Building {
             quantityToRefine -= typeRefinedMaterial.getRatio();
             System.out.println("Quantités bruts restant :  " + getRawQuantitySalvage());
 
-            setBasicMaterialQuantity(+1);
+            setBasicMaterialQuantity(+1); // TODO : Supprimer cette merde
             System.out.println(typeRefinedMaterial.getLabel()+" créés " + getBasicMaterialQuantity());
         }
             System.out.println("Aucune matière a raffiner.");
